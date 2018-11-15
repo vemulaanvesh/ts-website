@@ -5,4 +5,6 @@
  RUN apt-get update
  RUN apt-get install php-pear php-fpm php-dev php-zip php-curl php-xmlrpc php-gd php-mysql php-mbstring php-xml libapache2-mod-php -y
  RUN service apache2 restart
+ RUN service apache2 start
+ RUN service apache2 status
  COPY index.php /var/www/html/
